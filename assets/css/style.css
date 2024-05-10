@@ -178,3 +178,37 @@ img {
 #contact .form-control:focus {
     border-color: var(--color-brand);
 }
+
+/* Honourable Mentions CSS Enhancements */
+#honourable-mentions .container {
+    max-width: 1200px; /* Maximum width for better control */
+    margin: auto; /* Centering the container */
+}
+
+#honourable-mentions .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centering cards when less than four are in a row */
+}
+
+#honourable-mentions .col-md-6 {
+    flex: 0 0 50%; /* 50% width for medium and up devices */
+    max-width: 50%; /* Maximum width set to 50% to avoid overflow */
+    padding: 15px; /* Padding around cards for spacing */
+}
+
+#honourable-mentions .card-custom {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for better visual depth */
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+#honourable-mentions .card-custom:hover {
+    transform: translateY(-5px); /* Raise effect on hover for interactivity */
+}
+
+@media (max-width: 768px) {
+    #honourable-mentions .col-md-6 {
+        flex: 0 0 100%; /* Full width on small devices */
+        max-width: 100%;
+    }
+}
