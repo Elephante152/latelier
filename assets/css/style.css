@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
 
+.shadow-effect {
+    transition: all 0.5s;
+    box-shadow: 0px 0px 0px 0px var(--color-base); /* Initial state with no visible shadow */
+}
+
+.shadow-effect:hover {
+    box-shadow: 10px 10px 0px 0px var(--color-brand); /* Large visible shadow in brand color on hover */
+}
+
 :root {
     --color-body: #b6cbce;
     --color-heading: #eef3db;
@@ -8,16 +17,16 @@
     --color-brand: #e0f780;
     --color-brand2: #deff58;
     --sidebar-width: 240px;
-    --font-base: "Bai Jamjuree"
+    --font-base: "Bai Jamjuree", sans-serif;
 }
 
 body {
     background-color: var(--color-base2);
     color: var(--color-body);
-    font-family: var(--font-base), sans-serif;
+    font-family: var(--font-base);
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     color: var(--color-heading);
     font-weight: 700;
 }
@@ -25,7 +34,7 @@ h1,h2,h3,h4,h5,h6 {
 a {
     text-decoration: none;
     color: var(--color-body);
-    transition: all -.4s ease;
+    transition: all 0.4s ease;
 }
 
 a:hover {
@@ -46,21 +55,11 @@ img {
 
 .full-height {
     min-height: 100vh;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 80px;
     padding-bottom: 80px;
-    border-bottom: 2px solid rgba(255,255,255,0.1);
-}
-
-.shadow-effect {
-    transition: all 0.5s;
-}
-
-.shadow-effect:hover {
-    box-shadow: -6px 6px 0 0 var(--color-brand);
 }
 
 .iconbox {
@@ -74,22 +73,17 @@ img {
     color: var(--color-base);
 }
 
-/*NAVBAR*/
 .navbar {
     background-color: var(--color-base);
-}
-
-.navbar .nav-link{
-    font-weight: 700;
-    text-transform: uppercase;
     color: #fff;
 }
 
-.navbar .nav-link:hover {
-    color: var(--color-brand);
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-.navbar.nav-link.active{
+.navbar .nav-link:hover {
     color: var(--color-brand);
 }
 
@@ -106,14 +100,11 @@ img {
         border: 8px solid var(--color-brand);
     }
 
-    /*--CONTENTWRAP--*/
     #content-wrap {
         padding-left: var(--sidebar-width);
     }
-    /*--CONTENTWRAP--*/
 }
 
-/*-BTN--*/
 .btn {
     padding: 12px 28px;
     font-weight: 700;
@@ -121,18 +112,14 @@ img {
 
 .btn-brand {
     background-color: var(--color-brand);
-    border-color: var(--color-brand);
     color: var(--color-base);
+    border: none;
 }
 
-.btn-brand:hover,
-.btn-brand:focus {
+.btn-brand:hover {
     background-color: var(--color-brand2);
     color: var(--color-base);
-    border-color: var(--color-brand2);
 }
-
-/*-BTN--*/
 
 .link-custom {
     font-weight: 700;
@@ -154,7 +141,6 @@ img {
     width: 100%;
 }
 
-/*--CARD--*/
 .card-custom .card-custom-image {
     overflow: hidden;
 }
@@ -167,8 +153,6 @@ img {
     transform: scale(1.1);
 }
 
-/*COMMISSION L'ATELIER*/
-
 #contact .form-control {
     background-color: var(--color-base);
     border-color: var(--color-base);
@@ -179,36 +163,36 @@ img {
     border-color: var(--color-brand);
 }
 
-/* Honourable Mentions CSS Enhancements */
-#honourable-mentions .container {
-    max-width: 1200px; /* Maximum width for better control */
-    margin: auto; /* Centering the container */
+#honourable-mentions .accordion-button {
+    background-color: var(--color-base); /* Use base color for the background */
+    color: var(--color-heading); /* Use heading color for text */
+    border: 1px solid var(--color-brand); /* Optional: add border using brand color */
 }
 
-#honourable-mentions .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centering cards when less than four are in a row */
+#honourable-mentions .accordion-button:not(.collapsed),
+#honourable-mentions .accordion-button:hover {
+    background-color: var(--color-brand); /* Brand color for background on hover/active */
+    color: var(--color-base); /* Base color for text for better contrast */
 }
 
-#honourable-mentions .col-md-6 {
-    flex: 0 0 50%; /* 50% width for medium and up devices */
-    max-width: 50%; /* Maximum width set to 50% to avoid overflow */
-    padding: 15px; /* Padding around cards for spacing */
+#honourable-mentions .accordion-button::after {
+    color: var(--color-heading); /* Initial color for the icon */
 }
 
-#honourable-mentions .card-custom {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for better visual depth */
-    transition: transform 0.3s ease; /* Smooth transform on hover */
+#honourable-mentions .accordion-button:not(.collapsed)::after {
+    color: var(--color-base); /* Base color when expanded */
 }
 
-#honourable-mentions .card-custom:hover {
-    transform: translateY(-5px); /* Raise effect on hover for interactivity */
+#honourable-mentions .accordion-body {
+    background-color: #f8f9fa; /* Maintains a light grey background for content */
 }
 
-@media (max-width: 768px) {
-    #honourable-mentions .col-md-6 {
-        flex: 0 0 100%; /* Full width on small devices */
-        max-width: 100%;
-    }
+#home .btn.btn-brand {
+    background-color: var(--color-brand); /* Button background color */
+    color: var(--color-base); /* Button text color */
+}
+
+#home .btn.btn-brand:hover {
+    background-color: var(--color-brand2); /* Button hover background color */
+    color: var(--color-base); /* Button hover text color */
 }
