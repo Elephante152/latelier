@@ -1,26 +1,32 @@
+// server.js
+require('dotenv').config();
+const express = require('express');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-document.getElementById('checkout-tech-audit').addEventListener('click', () => handleCheckout('price_1PHzgA089CJ3PNUMRrPe9xqR'));
-document.getElementById('checkout-custom-solutions').addEventListener('click', () => handleCheckout('price_1PHzgA089CJ3PNUMRrPe9xqR'));
-document.getElementById('checkout-service-agreement').addEventListener('click', () => handleCheckout('price_1PHzgA089CJ3PNUMRrPe9xqR'));
-document.getElementById('checkout-why-choose').addEventListener('click', () => handleCheckout('price_1PHzgA089CJ3PNUMRrPe9xqR'));
+const app = express();
+app.use(express.static('public'));
+app.use(express.json());
 
-document.getElementById('checkout-restaurant').addEventListener('click', () => handleCheckout('price_1PHzRv089CJ3PNUMgNmcfoek'));
-document.getElementById('checkout-salon').addEventListener('click', () => handleCheckout('price_1PHzZt089CJ3PNUM4O3sMLBL'));
-document.getElementById('checkout-gallery').addEventListener('click', () => handleCheckout('price_1PHzbB089CJ3PNUMT9Mr5sob'));
+app.post('/create-checkout-session', async (req, res) => {
+  const { priceId } = req.body;
 
-async function handleCheckout(priceId) {
-  const response = await fetch('/create-checkout-session', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      priceId: priceId,
-    }),
-  });
+  try {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+      line_items: [{
+        price: priceId,
+        quantity: 1,
+      }],
+      mode: 'subscription',
+      success_url: `${req.headers.origin}/success.html`,
+      cancel_url: `${req.headers.origin}/cancel.html`,
+    });
 
-  const session = await response.json();
+    res.json({ id: session.id });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
-  await stripe.redirectToCheckout({ sessionId: session.id });
-}
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
