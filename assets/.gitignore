@@ -1,19 +1,20 @@
-# Node modules
-node_modules/
-
 # Environment variables
 .env
+
+# Node modules
+node_modules/
 
 # Logs
 logs/
 *.log
 
-# Dependencies
-package-lock.json
-yarn.lock
+# Dependency directories
+/node_modules
+/bower_components
 
-# Production
-build/
+# Production directories
+/build
+/dist
 
 # Miscellaneous
 .DS_Store

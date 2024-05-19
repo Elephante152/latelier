@@ -1,6 +1,4 @@
-// checkout.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Ensure Stripe.js has loaded
     if (!window.Stripe) {
         console.error("Stripe.js has not loaded.");
         return;
@@ -33,30 +31,30 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     document.getElementById('checkout-tech-audit').addEventListener('click', function() {
-        handleCheckout('price_1PHzgA089CJ3PNUMRrPe9xqR'); // Replace with your actual Price ID for the tech audit
+        handleCheckout('price_1PHzgA089CJ3PNUMRrPe9xqR');
     });
 
     document.getElementById('checkout-custom-solutions').addEventListener('click', function() {
-        handleCheckout('price_1PHzgA089CJ3PNUMRrPe9xqR'); // Replace with your actual Price ID for custom solutions
+        handleCheckout('price_1PHzgA089CJ3PNUMRrPe9xqR');
     });
 
     document.getElementById('checkout-service-agreement').addEventListener('click', function() {
-        handleCheckout('price_1PHzgA089CJ3PNUMRrPe9xqR'); // Replace with your actual Price ID for the service agreement
+        handleCheckout('price_1PHzgA089CJ3PNUMRrPe9xqR');
     });
 
     document.getElementById('checkout-why-choose').addEventListener('click', function() {
-        handleCheckout('price_1PHzgA089CJ3PNUMRrPe9xqR'); // Replace with your actual Price ID for why choose
+        handleCheckout('price_1PHzgA089CJ3PNUMRrPe9xqR');
     });
 
     document.getElementById('checkout-restaurant').addEventListener('click', function() {
-        handleCheckout('price_1PHzRv089CJ3PNUMgNmcfoek'); // Replace with your actual Price ID for restaurant automation
+        handleCheckout('price_1PHzRv089CJ3PNUMgNmcfoek');
     });
 
     document.getElementById('checkout-salon').addEventListener('click', function() {
-        handleCheckout('price_1PHzZt089CJ3PNUM4O3sMLBL'); // Replace with your actual Price ID for salon automation
+        handleCheckout('price_1PHzZt089CJ3PNUM4O3sMLBL');
     });
 
     document.getElementById('checkout-gallery').addEventListener('click', function() {
-        handleCheckout('price_1PHzbB089CJ3PNUMT9Mr5sob'); // Replace with your actual Price ID for gallery automation
+        handleCheckout('price_1PHzbB089CJ3PNUMT9Mr5sob');
     });
 });
