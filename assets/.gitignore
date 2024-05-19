@@ -1,3 +1,19 @@
-# .gitignore
+# Node modules
+node_modules/
+
+# Environment variables
 .env
-node_modules
+
+# Logs
+logs/
+*.log
+
+# Dependencies
+package-lock.json
+yarn.lock
+
+# Production
+build/
+
+# Miscellaneous
+.DS_Store
