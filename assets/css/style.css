@@ -156,37 +156,37 @@ img {
 }
 
 #honourable-mentions .accordion-button {
-    background-color: var(--color-base); /* Use base color for the background */
-    color: var(--color-heading); /* Use heading color for text */
-    border: 1px solid var(--color-brand); /* Optional: add border using brand color */
+    background-color: var(--color-base);
+    color: var(--color-heading);
+    border: 1px solid var(--color-brand);
 }
 
 #honourable-mentions .accordion-button:not(.collapsed),
 #honourable-mentions .accordion-button:hover {
-    background-color: var(--color-brand); /* Brand color for background on hover/active */
-    color: var(--color-base); /* Base color for text for better contrast */
+    background-color: var(--color-brand);
+    color: var(--color-base);
 }
 
 #honourable-mentions .accordion-button::after {
-    color: var(--color-heading); /* Initial color for the icon */
+    color: var(--color-heading);
 }
 
 #honourable-mentions .accordion-button:not(.collapsed)::after {
-    color: var(--color-base); /* Base color when expanded */
+    color: var(--color-base);
 }
 
 #honourable-mentions .accordion-body {
-    background-color: #f8f9fa; /* Maintains a light grey background for content */
+    background-color: #f8f9fa;
 }
 
 #home .btn.btn-brand {
-    background-color: var(--color-brand); /* Button background color */
-    color: var(--color-base); /* Button text color */
+    background-color: var(--color-brand);
+    color: var(--color-base);
 }
 
 #home .btn.btn-brand:hover {
-    background-color: var(--color-brand2); /* Button hover background color */
-    color: var(--color-base); /* Button hover text color */
+    background-color: var(--color-brand2);
+    color: var(--color-base);
 }
 
 /* Chatbot Styling */
@@ -278,7 +278,6 @@ img {
     background-color: var(--color-brand2);
 }
 
-/* Iconbox styling for sending button icon */
 .iconbox {
     background-color: var(--color-brand);
     color: var(--color-base);
