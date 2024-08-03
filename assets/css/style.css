@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
 
-.shadow-effect {
-    transition: all 0.5s;
-    box-shadow: 0px 0px 0px 0px var(--color-base); /* Initial state with no visible shadow */
-}
-
-.shadow-effect:hover {
-    box-shadow: 10px 10px 0px 0px var(--color-brand); /* Large visible shadow in brand color on hover */
-}
-
 :root {
     --color-body: #b6cbce;
     --color-heading: #eef3db;
@@ -20,6 +11,7 @@
     --font-base: "Bai Jamjuree", sans-serif;
 }
 
+/* General Styling */
 body {
     background-color: var(--color-base2);
     color: var(--color-body);
@@ -197,10 +189,7 @@ img {
     color: var(--color-base); /* Button hover text color */
 }
 
-/* Import the custom font */
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
-
-/* General Chatbot Styling */
+/* Chatbot Styling */
 .chat-widget {
     font-family: var(--font-base);
     background-color: var(--color-base2);
@@ -209,6 +198,11 @@ img {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    max-width: 400px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
 .chat-widget:hover {
@@ -223,17 +217,27 @@ img {
     text-align: center;
 }
 
-.chat-message {
+.chat-messages {
     padding: 10px;
-    margin: 5px;
+    max-height: 300px;
+    overflow-y: auto;
     background-color: var(--color-base);
-    color: var(--color-body);
+}
+
+.chat-message {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: var(--color-body);
+    color: var(--color-base2);
     border-radius: 5px;
+    width: fit-content;
+    max-width: 75%;
 }
 
 .chat-message.user {
     background-color: var(--color-brand);
     color: var(--color-base);
+    margin-left: auto;
 }
 
 .chat-footer {
