@@ -196,3 +196,98 @@ img {
     background-color: var(--color-brand2); /* Button hover background color */
     color: var(--color-base); /* Button hover text color */
 }
+
+/* Import the custom font */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+/* General Chatbot Styling */
+.chat-widget {
+    font-family: var(--font-base);
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.chat-widget:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.chat-header {
+    background-color: var(--color-base);
+    color: var(--color-heading);
+    padding: 12px 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.chat-message {
+    padding: 10px;
+    margin: 5px;
+    background-color: var(--color-base);
+    color: var(--color-body);
+    border-radius: 5px;
+}
+
+.chat-message.user {
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.chat-footer {
+    padding: 10px;
+    background-color: var(--color-base2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-input {
+    flex-grow: 1;
+    border: 1px solid var(--color-base);
+    border-radius: 4px;
+    padding: 8px;
+    background-color: var(--color-base2);
+    color: var(--color-body);
+}
+
+.chat-input:focus {
+    outline: none;
+    border-color: var(--color-brand);
+}
+
+.chat-send-button {
+    background-color: var(--color-brand);
+    color: var(--color-base);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.chat-send-button:hover {
+    background-color: var(--color-brand2);
+}
+
+/* Iconbox styling for sending button icon */
+.iconbox {
+    background-color: var(--color-brand);
+    color: var(--color-base);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.iconbox:hover {
+    background-color: var(--color-brand2);
+}
