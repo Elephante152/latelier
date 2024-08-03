@@ -191,106 +191,83 @@ img {
 
 /* Chatbot Styling */
 .chat-widget {
-    font-family: var(--font-base);
-    background-color: var(--color-base2);
-    color: var(--color-body);
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    max-width: 400px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.chat-widget:hover {
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    font-family: var(--font-base) !important;
+    background-color: var(--color-base2) !important;
+    color: var(--color-body) !important;
+    border-radius: 8px !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+    max-width: 400px !important;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 1000 !important;
 }
 
 .chat-header {
-    background-color: var(--color-base);
-    color: var(--color-heading);
-    padding: 12px 16px;
-    font-weight: 700;
-    text-align: center;
+    background-color: var(--color-base) !important;
+    color: var(--color-heading) !important;
+    padding: 12px 16px !important;
+    font-weight: 700 !important;
+    text-align: center !important;
 }
 
 .chat-messages {
-    padding: 10px;
-    max-height: 300px;
-    overflow-y: auto;
-    background-color: var(--color-base);
+    padding: 10px !important;
+    max-height: 300px !important;
+    overflow-y: auto !important;
+    background-color: var(--color-base) !important;
 }
 
 .chat-message {
-    margin: 5px 0;
-    padding: 10px;
-    background-color: var(--color-body);
-    color: var(--color-base2);
-    border-radius: 5px;
-    width: fit-content;
-    max-width: 75%;
+    margin: 5px 0 !important;
+    padding: 10px !important;
+    background-color: var(--color-body) !important;
+    color: var(--color-base2) !important;
+    border-radius: 5px !important;
+    width: fit-content !important;
+    max-width: 75% !important;
 }
 
 .chat-message.user {
-    background-color: var(--color-brand);
-    color: var(--color-base);
-    margin-left: auto;
+    background-color: var(--color-brand) !important;
+    color: var(--color-base) !important;
+    margin-left: auto !important;
 }
 
 .chat-footer {
-    padding: 10px;
-    background-color: var(--color-base2);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 10px !important;
+    background-color: var(--color-base2) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
 }
 
 .chat-input {
-    flex-grow: 1;
-    border: 1px solid var(--color-base);
-    border-radius: 4px;
-    padding: 8px;
-    background-color: var(--color-base2);
-    color: var(--color-body);
+    flex-grow: 1 !important;
+    border: 1px solid var(--color-base) !important;
+    border-radius: 4px !important;
+    padding: 8px !important;
+    background-color: var(--color-base2) !important;
+    color: var(--color-body) !important;
 }
 
 .chat-input:focus {
-    outline: none;
-    border-color: var(--color-brand);
+    outline: none !important;
+    border-color: var(--color-brand) !important;
 }
 
 .chat-send-button {
-    background-color: var(--color-brand);
-    color: var(--color-base);
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-weight: 700;
-    margin-left: 10px;
-    transition: all 0.3s ease;
+    background-color: var(--color-brand) !important;
+    color: var(--color-base) !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 8px 16px !important;
+    cursor: pointer !important;
+    font-weight: 700 !important;
+    margin-left: 10px !important;
+    transition: all 0.3s ease !important;
 }
 
 .chat-send-button:hover {
-    background-color: var(--color-brand2);
-}
-
-.iconbox {
-    background-color: var(--color-brand);
-    color: var(--color-base);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-left: 10px;
-    transition: all 0.3s ease;
-}
-
-.iconbox:hover {
-    background-color: var(--color-brand2);
+    background-color: var(--color-brand2) !important;
 }
