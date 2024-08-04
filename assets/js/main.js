@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (message !== '') {
       addMessage(message, 'user');
       chatInput.value = '';
-      
+
       // Simulate a response from the bot
       setTimeout(() => {
         const response = getChatbotResponse(message);
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
       "help": "Sure, let me know what you need help with!",
       "bye": "Goodbye! Have a great day!"
     };
-    
+
     const lowerCaseMessage = message.toLowerCase();
     return responses[lowerCaseMessage] || "I'm not sure how to respond to that. Can you rephrase?";
   }
