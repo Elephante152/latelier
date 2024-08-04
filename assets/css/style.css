@@ -275,19 +275,18 @@ img {
 /* Updated Form Styling */
 
 .form-container {
-    padding: 20px;
-    background-color: var(--color-base);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
     position: fixed;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    width: 400px;
-    max-height: 90vh;
-    overflow-y: auto;
-    z-index: 1000;
+    z-index: 10; /* Ensure form is above content */
+    background-color: var(--color-base);
     border-left: 3px solid var(--color-brand);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px 0 0 8px;
 }
 
 .form-container h1,
