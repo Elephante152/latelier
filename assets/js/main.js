@@ -9,8 +9,10 @@ AOS.init({
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
 
-// Chatbot functionality
+// DOMContentLoaded event to ensure the DOM is fully loaded before executing scripts
 document.addEventListener("DOMContentLoaded", function() {
+
+  // Chatbot functionality
   const chatInput = document.getElementById('chat-input');
   const chatMessages = document.getElementById('chat-messages');
   const chatSendButton = document.getElementById('chat-send-button');
@@ -61,4 +63,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const lowerCaseMessage = message.toLowerCase();
     return responses[lowerCaseMessage] || "I'm not sure how to respond to that. Can you rephrase?";
   }
+
+  // Form toggle functionality
+  const ctaButton = document.getElementById('cta-form-trigger');
+  const formContainer = document.getElementById('embedded-form');
+
+  ctaButton.addEventListener('click', function() {
+    formContainer.classList.toggle('active');
+  });
+
 });
