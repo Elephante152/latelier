@@ -272,7 +272,8 @@ img {
     background-color: var(--color-brand2) !important;
 }
 
-/* Form Styling */
+/* Updated Form Styling */
+
 .form-container {
     padding: 20px;
     background-color: var(--color-base);
@@ -283,6 +284,8 @@ img {
     right: 0;
     transform: translateY(-50%);
     width: 400px;
+    max-height: 90vh;
+    overflow-y: auto;
     z-index: 1000;
     border-left: 3px solid var(--color-brand);
 }
@@ -317,4 +320,15 @@ img {
 .form-container .form-text,
 .form-container .form-check-label {
     color: var(--color-body);
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        overflow-y: auto;
+    }
 }
