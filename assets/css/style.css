@@ -200,7 +200,7 @@ img {
 .chat-widget-container {
     position: fixed;
     bottom: 20px;
-    left: 20px; /* Change to left */
+    left: 20px; /* Position on the left */
     z-index: 20;
     background-color: var(--color-base2);
     border-radius: 8px;
