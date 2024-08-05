@@ -42,3 +42,4 @@ ctaButton.addEventListener('click', () => {
         ctaButton.querySelector('.cta-arrow').style.transform = 'rotate(0deg)';
     }
 });
+
