@@ -11,695 +11,671 @@
     <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar">
-  <!--NAVBAR-->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container flex-lg-column">
-      <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
-        <span class="h3 fw-bold d-block d-lg-none">L'Atelier</span>
-        <img
-          src="assets/images/LOGO-removebg-preview.png"
-          class="d-none d-lg-block rounded-circle"
-          alt=""
-        />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#honourable-mentions">Honourable Mentions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#method+mantra">Method+Mantra</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#pricing">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#automations">Automations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#reviews">Reviews</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#workshop">Workshop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#braindump/social">Braindump/Social</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#commission-latelier">Commission L'atelier</a>
-          </li>
-        </ul>
-      </div>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container flex-lg-column">
+            <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
+                <span class="h3 fw-bold d-block d-lg-none">L'Atelier</span>
+                <img src="assets/images/LOGO-removebg-preview.png" class="d-none d-lg-block rounded-circle" alt="Logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#honourable-mentions">Honourable Mentions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#method+mantra">Method+Mantra</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#automations">Automations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#workshop">Workshop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#braindump/social">Braindump/Social</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#commission-latelier">Commission L'atelier</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR -->
+
+    <!-- CONTENTWRAP -->
+    <div id="content-wrap">
+        <!-- HOME -->
+        <section id="home" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h1 class="display-4 fw-bold" data-aos="fade-up">
+                            L'atelier De Shaun:
+                            <span class="text-brand">The Artistry of Code</span>
+                        </h1>
+                        <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">
+                            Engage with Shaun on a fractional basis
+                            <span class="text-brand">0 RISK, HIGH REWARD MODEL</span>
+                            Unlock transformative business growth with our strategic, full-stack solutions.
+                        </p>
+                        <div data-aos="fade-up" data-aos-delay="600">
+                            <a href="#workshop" class="btn btn-brand me-3">See My Work</a>
+                            <a href="mailto:rsaini6152@gmail.com" class="link-custom">Write Me :)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- HOME -->
+
+        <!-- CTA Button for the Form -->
+        <div id="cta-form-trigger" class="cta-button">
+            Start Automating Now
+            <span class="cta-arrow">▼</span>
+        </div>
+
+        <!-- Embedded Form Integration -->
+        <div class="form-container hidden" id="embedded-form">
+            <iframe src="https://api.leadconnectorhq.com/widget/form/0X1zbJgl3WzJ6y66oxV8" id="sticky-sidebar-right-0X1zbJgl3WzJ6y66oxV8" title="Form 2" style="width:100%;height:100%;border:none;border-radius:3px;"></iframe>
+        </div>
+        
+        <!-- SERVICES -->
+        <section id="services" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">Services</h6>
+                        <h1>What I Do</h1>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="service p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="las la-dolly"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">Full Stack Development</h5>
+                            <p>
+                                Building digital platforms from scratch, tailored to fit your
+                                business needs & exceed your expectations
+                            </p>
+                            <a href="#pricing" class="link-custom">Process & Engagement</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="las la-cloud"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">IAAS/SAAS/PAAS</h5>
+                            <p>
+                                Specializing in Infrastructure, Software, and Platform as a
+                                Service solutions, L'atelier provides tailored, scalable
+                                cloud-based frameworks that support business growth &
+                                operational efficiency
+                            </p>
+                            <a href="#pricing" class="link-custom">Process & Engagement</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="las la-fingerprint"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">Consulting + Brand Development</h5>
+                            <p>
+                                Forge your brand’s identity with strategic insight &
+                                creative flair that cuts through the digital noise.
+                            </p>
+                            <a href="#pricing" class="link-custom">Process & Engagement</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SERVICES -->
+
+        <!-- HONOURABLE MENTIONS -->
+        <section id="honourable-mentions" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-12">
+                        <h6 class="text-brand">Honourable Mentions</h6>
+                        <h1>Partnerships and Innovations</h1>
+                        <p>Explore our key partnerships and innovations by interacting with the sections below.</p>
+                    </div>
+                </div>
+                <div class="accordion" id="honourableMentionsAccordion">
+                    <!-- Card for Endorsement by Industry Leaders -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <i class="las la-thumbs-up la-lg"></i> Endorsed by Industry Leaders
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#honourableMentionsAccordion">
+                            <div class="accordion-body">
+                                <img src="assets/images/RTC.png" alt="Industry Leader Endorsement" class="img-fluid mb-3">
+                                <p>A glowing recommendation from Rising Tide Consultants, praising the Centreel application developed by 152 Tech for its unparalleled compliance features in the cannabis industry.</p>
+                                <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand">Commission L'atelier</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card for Ironwood Capital Announcement -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="las la-handshake la-lg"></i> Strategic Acquisition by Ironwood Capital
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#honourableMentionsAccordion">
+                            <div class="accordion-body">
+                                <img src="assets/images/yahoo.png" alt="Ironwood Transaction" class="img-fluid mb-3">
+                                <p>On December 13, 2019, Ironwood Capital Corp. announced a proposed qualifying transaction with 152 Tech Solutions. This partnership aimed to leverage strategic synergies and enhance market offerings in technology solutions.</p>
+                                <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card for Revolutionizing Cannabis Retail -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="las la-cannabis la-lg"></i> Revolutionizing Cannabis Retail with Innovative Tech
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#honourableMentionsAccordion">
+                            <div class="accordion-body">
+                                <img src="assets/images/DH.png" alt="Cannabis Retail Innovation" class="img-fluid mb-3">
+                                <p>Featured in an article, showcasing a dispensary using Shaun's co-founded technology to enhance user experience and ensure compliance in the budding new sector.</p>
+                                <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand">Commission L'atelier</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card for VentureLabs Spotlight -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <i class="las la-lightbulb la-lg"></i> VentureLabs Innovation Spotlight
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#honourableMentionsAccordion">
+                            <div class="accordion-body">
+                                <img src="assets/images/VL1.png" alt="VentureLabs Company Spotlight" class="img-fluid mb-3">
+                                <p>This spotlight by SFU VentureLabs highlights how 152 Tech, co-founded by Shaun Saini, is creating smart retail solutions that streamline operations and safeguard data, all under one roof.</p>
+                                <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand">Commission L'atelier</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card for Ready to Rocket Recognition -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <i class="las la-rocket la-lg"></i> Recognition by Ready to Rocket Association
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#honourableMentionsAccordion">
+                            <div class="accordion-body">
+                                <img src="assets/images/VL2.png" alt="Recognition by Ready 2 Rocket Association" class="img-fluid mb-3">
+                                <p>This spotlight by Ready 2 Rocket Association recognized how 152 Tech, co-founded by Shaun Saini, is innovating smart retail solutions.</p>
+                                <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand">Commission L'atelier</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- HONOURABLE MENTIONS -->
+
+        <!-- METHOD + MANTRA -->
+        <section id="method+mantra" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">My Approach</h6>
+                        <h1>How I Got Here, What I Believe In</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-5">
+                    <div class="col-lg-6">
+                        <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Mantra</h3>
+                        <div class="row gy-4">
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Origins</h4>
+                                    <p class="text-brand mb-2">From pivoting out of marketing school</p>
+                                    <p>To navigating the ups and downs of running 'Healthfare'(a family run QSR), my path wasn’t straightforward but always forward.</p>
+                                    <p>Each twist & turn only solidified my resolve to create meaningful solutions.</p>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Discovery</h4>
+                                    <p class="text-brand mb-2">How managing a family-run QSR led me to uncover the gaps in current tech solutions,</p>
+                                    <p>Sparking my journey into tech development.</p>
+                                    <p>This experience illuminated the pressing need for more intuitive systems that could seamlessly integrate into everyday business operations.</p>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="700">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Realization and Growth</h4>
+                                    <p class="text-brand mb-2">Building Centreel was just the beginning @152tech</p>
+                                    <p>My journey continues as I explore new ways to blend technology with practical business needs.</p>
+                                    <p>Every new project and collaboration is an opportunity to refine & reimagine the tools we use to drive business forward.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Methodology</h3>
+                        <div class="row gy-4">
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Early Adoption</h4>
+                                    <p class="text-brand mb-2">The early bird gets the worm</p>
+                                    <p>Embrace cutting-edge solutions now, before traditional systems drag you down.</p>
+                                    <p>Especially with Cloud. Here’s why employing adoption strategies are crucial for retail.</p>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Avoiding TPSS Pitfalls</h4>
+                                    <p class="text-brand mb-2">Learn from the past</p>
+                                    <p>Traditional third-party software services can be a trap that's best avoided.</p>
+                                    <p>Avoid the high costs of legacy systems. Invest in cloud solutions that scale with your needs without breaking the bank.</p>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="700">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Future-Proofing Retail</h4>
+                                    <p class="text-brand mb-2">Staying ahead of the curve</p>
+                                    <p>Means adapting now. I’ll show you how embracing the cloud can safeguard your business against future challenges.</p>
+                                    <p>Outpace competitors with superior technology that adapts quickly to market changes and consumer demands.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certification Section -->
+                    <div class="col-lg-12">
+                        <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300"> 
+                            <a href="https://www.credential.net/profile/rachitsaini280069/wallet" class="link-custom">
+                                <i class="las la-certificate la-lg"></i> Certifications
+                            </a>
+                        </h3>
+                        <div class="row gy-4">
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4 class="text-brand">
+                                        <a href="https://www.credential.net/profile/rachitsaini280069/wallet" class="link-custom">
+                                            <i class="las la-cloud la-lg"></i> Cloud and Cybersecurity Expertise
+                                        </a>
+                                    </h4>
+                                    <p>Proven skills in cutting-edge cloud technologies and cybersecurity, validated by industry-recognized certifications.</p>
+                                    <a href="https://www.credential.net/profile/rachitsaini280069/wallet" class="link-custom">
+                                        <i class="las la-eye la-lg"></i> View Cloud Certification
+                                    </a>
+                                    <a href="https://www.credential.net/profile/rachitsaini280069/wallet" class="link-custom">
+                                        <i class="las la-shield-alt la-lg"></i> View Cybersecurity Certification
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- METHOD + MANTRA -->
+
+        <!-- PRICING -->
+        <section id="pricing" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">Pricing</h6>
+                        <h1>Customize Costs, Maximize Efficiency</h1>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="bg-base p-4 rounded-4 shadow-effect">
+                            <h4><i class="las la-search-dollar la-lg"></i> Collaborating Only When Savings Are Guaranteed</h4>
+                            <p>Invest $300 in a comprehensive tech audit and discover potential savings</p>
+                            <p class="text-brand">Refundable if we don't find value.</p>
+                            <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand mt-2">Start Today</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="bg-base p-4 rounded-4 shadow-effect">
+                            <h4><i class="las la-tasks la-lg"></i> Customized Solutions</h4>
+                            <p>Receive a bespoke pricing plan.</p>
+                            <p class="text-brand">Designed to cut your technology & processing expenses by at least 30%.</p>
+                            <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand mt-2">Get Tailor-Made</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="bg-base p-4 rounded-4 shadow-effect">
+                            <h4><i class="las la-handshake la-lg"></i> Transparent Service Agreement</h4>
+                            <p>Post-audit discussions lead to a detailed service agreement.</p>
+                            <p class="text-brand">Where our mutual commitments, timelines, and expected outcomes are detailed.</p>
+                            <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand mt-2">Formalize Your Savings</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="bg-base p-4 rounded-4 shadow-effect">
+                            <h4 class="text-brand"><i class="las la-award la-lg"></i> Why Choose L'Atelier des Shaun?</h4>
+                            <ul>
+                                <li>Risk-Free Commitment</li>
+                                <li>Custom-Tailored Solutions</li>
+                                <li>Transparent Partnership</li>
+                            </ul>
+                            <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand mt-2">Start Today</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PRICING -->
+
+        <!-- AUTOMATIONS -->
+        <section id="automations" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">Pre-Packaged Solutions</h6>
+                        <h1>Automate and Thrive</h1>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4 text-center">
+                                <i class="las la-utensils la-5x"></i>
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h5 class="mb-4">Restaurant Automation</h5>
+                                <p class="text-brand mb-2">$333/month</p>
+                                <ul>
+                                    <li>Boost Revenue & Regulars</li>
+                                    <li>Enhance Reviews & Customer Experience</li>
+                                    <li>Advanced Data Collection to Build Loyalty and Brand Reputation</li>
+                                </ul>
+                                <button id="checkout-restaurant" class="btn btn-brand mt-2">Automate Your Restaurant</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="flip-left" data-aos-delay="600">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4 text-center">
+                                <i class="las la-cut la-5x"></i>
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h5 class="mb-4">Hair Salon Automation</h5>
+                                <p class="text-brand mb-2">$699/month</p>
+                                <ul>
+                                    <li>Boost Show Up Rates & Efficiency</li>
+                                    <li>Enhance Reviews & Customer Experience</li>
+                                    <li>Advanced Data Collection to Build Loyalty and Brand Reputation</li>
+                                </ul>
+                                <button id="checkout-salon" class="btn btn-brand mt-2">Automate Your Salon</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="flip-left" data-aos-delay="800">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4 text-center">
+                                <i class="las la-palette la-5x"></i>
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h5 class="mb-4">Art-Gallery Automation</h5>
+                                <p class="text-brand mb-2">$666/month</p>
+                                <ul>
+                                    <li>Boost Show Up Rates & Efficiency</li>
+                                    <li>Enhance Reviews & Customer Experience</li>
+                                    <li>Advanced Data Collection to Build Loyalty</li>
+                                </ul>
+                                <button id="checkout-gallery" class="btn btn-brand mt-2">Automate Your Gallery</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- AUTOMATIONS -->
+
+        <!-- REVIEWS -->
+        <section id="reviews" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">From Previous Commissions</h6>
+                        <h1>Thoughts From Clients & Collaborators</h1>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="review shadow-effect bg-base p-4 rounded-4">
+                            <div class="text-brand h5">
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                            </div>
+                            <p class="my-3">Centreel developed by Shaun/152 was one of the best in market, making it easy to train employees, maintain inventory, & track statistics. Communication is a character that I highly put an emphasis on. With Centreel, there has never been a case of miscommunication because their representatives are always ready to take your call & resolve any issues that you may be experiencing. Without a doubt, I would recommend Shaun for your IT/development needs.</p>
+                            <div class="person">
+                                <h5 class="mb-0">Lali Toor</h5>
+                                <p class="mb-0">Kushi Cannabis</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="review shadow-effect bg-base p-4 rounded-4">
+                            <div class="text-brand h5">
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                            </div>
+                            <p class="my-3">I feel that they are always there for us when we need them. In this new and ever-growing industry there is a need for people that care about their customers. Definitely recommend them to other businesses.</p>
+                            <div class="person">
+                                <h5 class="mb-0">Arpit Kapila</h5>
+                                <p class="mb-0">Eco Green Leaf Bar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="review shadow-effect bg-base p-4 rounded-4">
+                            <div class="text-brand h5">
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                            </div>
+                            <p class="my-3">Shaun came to Tumbler Ridge to pitch their POS System to us. Shaun called and I told him he would be wasting his time because I was not going to switch but, he insisted on just 15 minutes of my time. I figured if he was willing to come this far I would take the time to listen. I am so happy that I did. I was so impressed with his passion and with their vision that I jumped at the chance to become a client.</p>
+                            <div class="person">
+                                <h5 class="mb-0">Christine Vanderburgt</h5>
+                                <p class="mb-0">Ridge Cannabis & KC Dollar Store</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- REVIEWS -->
+
+        <!-- WORKSHOP -->
+        <section id="workshop" class="full-height px-lg-5">
+            <div class="container-fluid">
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">Showcase</h6>
+                        <h1>Startup Ventures to Tech Innovations That Redefine Standards.</h1>
+                        <p>Explore our innovations by scrolling right ➡️</p>
+                    </div>
+                </div>
+                <div class="row flex-nowrap overflow-auto" style="scroll-snap-type: x mandatory;">
+                    <div class="col-md-6" data-aos="fade-right" data-aos-delay="100" style="scroll-snap-align: start;">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="assets/images/this-removebg-preview.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>The Seamless Sales & Reconciliation Interface</h4>
+                                <p>L'atelier's hassle-free solution simplifies sales tracking and addresses discrepancies with precision, delivering an elevated experience for your business and customers.</p>
+                                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-right" data-aos-delay="200" style="scroll-snap-align: start;">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="assets/images/Inventory_Screenshot-removebg-preview.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Revolutionizing Retail Inventory</h4>
+                                <p>Streamlined inventory solution that saves time and reduces errors with intuitive one-click upload and precision scanning technology.</p>
+                                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-right" data-aos-delay="300" style="scroll-snap-align: start;">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="assets/images/Pani-removebg-preview.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Pani: Nourishing Roots, Flowing Futures</h4>
+                                <p>Pani partners with Silver Sparrow Springs to deliver impactful water solutions, dedicating profits to safe water access for indigenous communities and sustainable agricultural initiatives.</p>
+                                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-right" data-aos-delay="400" style="scroll-snap-align: start;">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="assets/images/Fully Supported Hardware.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Seamless Hardware Integration</h4>
+                                <p>Combines cutting-edge hardware with bespoke software solutions, ensuring every system enhances your retail experience from setup to success.</p>
+                                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- WORKSHOP -->
+
+        <!-- SOCIAL -->
+        <section id="braindump/social" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">Social</h6>
+                        <h1>Thoughts & Musings</h1>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="assets/images/Blog post 1.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <p class="text-brand mb-2">LinkedIn</p>
+                                <h5 class="mb-4">Riding the Cloud: Retailers, Your Magic Carpet Awaits! 🌥️</h5>
+                                <p>Unleash the magic of ☁️ technology in your retail landscape. Step into a world where operational excellence, cost-efficiency, and superior customer experiences are the norm, not the exception. ☁️🚀#CloudMagic #RetailRevolution #DigitalDetour #OperationalExcellence #CustomerCentricity #TechTransformation</p>
+                                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="assets/images/streaming blog.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <p class="text-brand mb-2">LinkedIn</p>
+                                <h5 class="mb-4">Streaming's New Era: Adaptation and Balance in Digital Media Consumption</h5>
+                                <p>Uncover how shifts in consumer behaviour, privacy concerns, and new regulations like 🇨🇦's Bill C-11 are reshaping the landscape of on-demand entertainment. Dive into the intricacies of balancing personalized content with digital privacy. Don't miss out on understanding the future of media consumption.#StreamingEvolution #DigitalMedia #PrivacyMatters #ConsumerTrends #BillC11 #StreamingFuture</p>
+                                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="800">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="assets/images/big mac blog.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <p class="text-brand mb-2">LinkedIn</p>
+                                <h5 class="mb-4">From Big Macs to Big Tech: How Flipping the Switch on Automation and Cloud Tech is a Slam Dunk for Business Longevity</h5>
+                                <p>Explore how McDonald's automated venture in hashtag#Texas unveils the power of embracing automation and cloud tech for businesses big or small. Dive into a future where technology is not just a game-changer, but a survival requisite.#Automation #CloudTechnology #FutureOfWork#BusinessInnovation #TechTide #UBI</p>
+                                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SOCIAL -->
+
+        <!-- COMMISSION L'ATELIER -->
+        <section id="commission-latelier" class="full-height px-lg-5">
+            <div class="container">
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">Commission L'Atelier</h6>
+                        <h1>Schedule a Consultation</h1>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-lg-12" data-aos="zoom-in" data-aos-delay="100">
+                        <!-- Calendly inline widget begin -->
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/rsaini6152/30min" style="min-width:320px;height:700px;"></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        <!-- Calendly inline widget end -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- COMMISSION L'ATELIER -->
+
+    <!-- Integrated Chat Widget -->
+    <div class="chat-widget-container">
+        <chat-widget location-id="9WLzoBHW4f07rVVOFBwH"></chat-widget>
     </div>
-  </nav>
-  <!--NAVBAR-->
+    <script src="https://widgets.leadconnectorhq.com/loader.js" 
+            data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"></script>
+    <!-- Integrated Chat Widget -->
 
-  <!--CONTENTWRAP-->
-  <div id="content-wrap">
-    <!-- HOME -->
-    <section id="home" class="full-height px-lg-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10">
-            <h1 class="display-4 fw-bold" data-aos="fade-up">
-              L'atelier De Shaun:
-              <span class="text-brand">The Artistry of Code</span>
-            </h1>
-            <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">
-              <p>Engage with Shaun on a fractional basis</p>
-              <p class="text-brand">0 RISK, HIGH REWARD MODEL</p>
-              <p>Unlock transformative business growth with our strategic, full-stack solutions.</p>
-            </p>
-            <div data-aos="fade-up" data-aos-delay="600">
-              <a href="#workshop" class="btn btn-brand me-3">See My Work</a>
-              <a href="mailto:rsaini6152@gmail.com" class="link-custom">Write Me :)</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- //HOME -->
-
-<!-- CTA Button for the Form -->
-
-<div id="cta-form-trigger" class="cta-button">
-  Start Automating Now
-  <span class="cta-arrow">▼</span>
-</div>
-      
-<!-- Embedded Form Integration -->
-
-<div class="form-container hidden" id="embedded-form">
-  <iframe
-    src="https://api.leadconnectorhq.com/widget/form/0X1zbJgl3WzJ6y66oxV8"
-    id="sticky-sidebar-right-0X1zbJgl3WzJ6y66oxV8"
-    title="Form 2"
-    style="width:100%;height:100%;border:none;border-radius:3px;">
-  </iframe>
-</div>
-
-    <!-- // Embedded Form Integration -->
-
-    <!--SERVICES-->
-    <section id="services" class="full-height px-lg-5">
-      <div class="container">
-
-        <div class="row pb-4" data-aos="fade-up">
-          <div class="col-lg-8">
-            <h6 class="text-brand">Services</h6>
-            <h1>What I Do</h1>
-          </div>
-        </div>
-
-        <div class="row gy-4">
-
-          <div class="col-md-4" data-aos="fade-up">
-            <div class="service p-4 bg-base rounded-4 shadow-effect">
-              <div class="iconbox rounded-4">
-                <i class="las la-dolly"></i>
-              </div>
-              <h5 class="mt-4 mb-2">Full Stack Development</h5>
-              <p>
-                Building digital platforms from scratch, tailored to fit your
-                business needs & exceed your expectations
-              </p>
-              <a href="#pricing" class="link-custom">Process & Engagement</a>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="service p-4 bg-base rounded-4 shadow-effect">
-              <div class="iconbox rounded-4">
-                <i class="las la-cloud"></i>
-              </div>
-              <h5 class="mt-4 mb-2">IAAS/SAAS/PAAS</h5>
-              <p>
-                Specializing in Infrastructure, Software, and Platform as a
-                Service solutions, L'atelier provides tailored, scalable
-                cloud-based frameworks that support business growth &
-                operational efficiency
-              </p>
-              <a href="#pricing" class="link-custom">Process & Engagement</a>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="service p-4 bg-base rounded-4 shadow-effect">
-              <div class="iconbox rounded-4">
-                <i class="las la-fingerprint"></i>
-              </div>
-              <h5 class="mt-4 mb-2">Consulting + Brand Development</h5>
-              <p>
-                Forge your brand’s identity with strategic insight &
-                creative flair that cuts through the digital noise.
-              </p>
-              <a href="#pricing" class="link-custom">Process & Engagement</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--SERVICES-->
-
-    <!-- HONOURABLE MENTIONS -->
-    <section id="honourable-mentions" class="full-height px-lg-5">
-      <div class="container">
-        <div class="row pb-4" data-aos="fade-up">
-          <div class="col-12">
-            <h6 class="text-brand">Honourable Mentions</h6>
-            <h1>Partnerships and Innovations</h1>
-            <p>Explore our key partnerships and innovations by interacting with the sections below.</p>
-          </div>
-        </div>
-        <div class="accordion" id="honourableMentionsAccordion">
-          <!-- Card for Endorsement by Industry Leaders -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                <i class="las la-thumbs-up la-lg"></i> Endorsed by Industry Leaders
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#honourableMentionsAccordion">
-              <div class="accordion-body">
-                <img src="assets/images/RTC.png" alt="Industry Leader Endorsement" class="img-fluid mb-3">
-                <p>A glowing recommendation from Rising Tide Consultants, praising the Centreel application developed by 152 Tech for its unparalleled compliance features in the cannabis industry.</p>
-                <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand">Commission L'atelier</a>
-              </div>
-            </div>
-          </div>
-          <!-- Card for Ironwood Capital Announcement -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <i class="las la-handshake la-lg"></i> Strategic Acquisition by Ironwood Capital
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#honourableMentionsAccordion">
-              <div class="accordion-body">
-                <img src="assets/images/yahoo.png" alt="Ironwood Transaction" class="img-fluid mb-3">
-                <p>On December 13, 2019, Ironwood Capital Corp. announced a proposed qualifying transaction with 152 Tech Solutions. This partnership aimed to leverage strategic synergies and enhance market offerings in technology solutions.</p>
-                <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand">Learn More</a>
-              </div>
-            </div>
-          </div>
-          <!-- Card for Revolutionizing Cannabis Retail -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <i class="las la-cannabis la-lg"></i> Revolutionizing Cannabis Retail with Innovative Tech
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#honourableMentionsAccordion">
-              <div class="accordion-body">
-                <img src="assets/images/DH.png" alt="Cannabis Retail Innovation" class="img-fluid mb-3">
-                <p>Featured in an article, showcasing a dispensary using Shaun's co-founded technology to enhance user experience and ensure compliance in the budding new sector.</p>
-                <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand">Commission L'atelier</a>
-              </div>
-            </div>
-          </div>
-          <!-- Card for VentureLabs Spotlight -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="#collapseFour">
-                <i class="las la-lightbulb la-lg"></i> VentureLabs Innovation Spotlight
-              </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#honourableMentionsAccordion">
-              <div class="accordion-body">
-                <img src="assets/images/VL1.png" alt="VentureLabs Company Spotlight" class="img-fluid mb-3">
-                <p>This spotlight by SFU VentureLabs highlights how 152 Tech, co-founded by Shaun Saini, is creating smart retail solutions that streamline operations and safeguard data, all under one roof.</p>
-                <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand">Commission L'atelier</a>
-              </div>
-            </div>
-          </div>
-          <!-- Card for Ready to Rocket Recognition -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                <i class="las la-rocket la-lg"></i> Recognition by Ready to Rocket Association
-              </button>
-            </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#honourableMentionsAccordion">
-              <div class="accordion-body">
-                <img src="assets/images/VL2.png" alt="Recognition by Ready 2 Rocket Association" class="img-fluid mb-3">
-                <p>This spotlight by Ready 2 Rocket Association recognized how 152 Tech, co-founded by Shaun Saini, is innovating smart retail solutions.</p>
-                <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand">Commission L'atelier</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- //HONOURABLE MENTIONS -->
-
-    <!--ABOUT-->
-    <section id="method+mantra" class="full-height px-lg-5">
-      <div class="container">
-        <div class="row pb-4" data-aos="fade-up">
-          <div class="col-lg-8">
-            <h6 class="text-brand">My Approach</h6>
-            <h1>How I Got Here, What I Believe In</h1>
-          </div>
-        </div>
-
-        <div class="row gy-5">
-          <div class="col-lg-6">
-            <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Mantra</h3>
-            <div class="row gy-4">
-              <div class="col-12" data-aos="fade-up" data-aos-delay="300">
-                <div class="bg-base p-4 rounded-4 shadow-effect">
-                  <h4>Origins</h4>
-                  <p class="text-brand mb-2">From pivoting out of marketing school</p>
-                  <p>To navigating the ups and downs of running 'Healthfare'(a family run QSR), my path wasn’t straightforward but always forward.</p>
-                  <p>Each twist & turn only solidified my resolve to create meaningful solutions.</p>
-                </div>
-              </div>
-              <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                <div class="bg-base p-4 rounded-4 shadow-effect">
-                  <h4>Discovery</h4>
-                  <p class="text-brand mb-2">How managing a family-run QSR led me to uncover the gaps in current tech solutions,</p>
-                  <p>Sparking my journey into tech development.</p>
-                  <p>This experience illuminated the pressing need for more intuitive systems that could seamlessly integrate into everyday business operations.</p>
-                </div>
-              </div>
-              <div class="col-12" data-aos="fade-up" data-aos-delay="700">
-                <div class="bg-base p-4 rounded-4 shadow-effect">
-                  <h4>Realization and Growth</h4>
-                  <p class="text-brand mb-2">Building Centreel was just the beginning @152tech</p>
-                  <p>My journey continues as I explore new ways to blend technology with practical business needs.</p>
-                  <p>Every new project and collaboration is an opportunity to refine & reimagine the tools we use to drive business forward.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Methodology</h3>
-            <div class="row gy-4">
-              <div class="col-12" data-aos="fade-up" data-aos-delay="300">
-                <div class="bg-base p-4 rounded-4 shadow-effect">
-                  <h4>Early Adoption</h4>
-                  <p class="text-brand mb-2">The early bird gets the worm</p>
-                  <p>Embrace cutting-edge solutions now, before traditional systems drag you down.</p>
-                  <p>Especially with Cloud. Here’s why employing adoption strategies are crucial for retail.</p>
-                </div>
-              </div>
-              <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                <div class="bg-base p-4 rounded-4 shadow-effect">
-                  <h4>Avoiding TPSS Pitfalls</h4>
-                  <p class="text-brand mb-2">Learn from the past</p>
-                  <p>Traditional third-party software services can be a trap that's best avoided.</p>
-                  <p>Avoid the high costs of legacy systems. Invest in cloud solutions that scale with your needs without breaking the bank.</p>
-                </div>
-              </div>
-              <div class="col-12" data-aos="fade-up" data-aos-delay="700">
-                <div class="bg-base p-4 rounded-4 shadow-effect">
-                  <h4>Future-Proofing Retail</h4>
-                  <p class="text-brand mb-2">Staying ahead of the curve</p>
-                  <p>Means adapting now. I’ll show you how embracing the cloud can safeguard your business against future challenges.</p>
-                  <p>Outpace competitors with superior technology that adapts quickly to market changes and consumer demands.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Certification Section -->
-          <div class="col-lg-12">
-            <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300"> 
-              <a href="https://www.credential.net/profile/rachitsaini280069/wallet" class="link-custom">
-                <i class="las la-certificate la-lg"></i> Certifications
-              </a>
-            </h3>
-            <div class="row gy-4">
-              <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-                <div class="bg-base p-4 rounded-4 shadow-effect">
-                  <h4 class="text-brand">
-                    <a href="https://www.credential.net/profile/rachitsaini280069/wallet" class="link-custom">
-                      <i class="las la-cloud la-lg"></i> Cloud and Cybersecurity Expertise
-                    </a>
-                  </h4>
-                  <p>Proven skills in cutting-edge cloud technologies and cybersecurity, validated by industry-recognized certifications.</p>
-                  <a href="https://www.credential.net/profile/rachitsaini280069/wallet" class="link-custom">
-                    <i class="las la-eye la-lg"></i> View Cloud Certification
-                  </a>
-                  <a href="https://www.credential.net/profile/rachitsaini280069/wallet" class="link-custom">
-                    <i class="las la-shield-alt la-lg"></i> View Cybersecurity Certification
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!--//ABOUT-->
-
-    <!-- PRICING -->
-<section id="pricing" class="full-height px-lg-5">
-  <div class="container">
-    <div class="row pb-4" data-aos="fade-up">
-      <div class="col-lg-8">
-        <h6 class="text-brand">Pricing</h6>
-        <h1>Customize Costs, Maximize Efficiency</h1>
-      </div>
-    </div>
-    <div class="row gy-4">
-      <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
-        <div class="bg-base p-4 rounded-4 shadow-effect">
-          <h4><i class="las la-search-dollar la-lg"></i> Collaborating Only When Savings Are Guaranteed</h4>
-          <p>Invest $300 in a comprehensive tech audit and discover potential savings</p>
-          <p class="text-brand">Refundable if we don't find value.</p>
-          <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand mt-2">Start Today</a>
-        </div>
-      </div>
-      <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
-        <div class="bg-base p-4 rounded-4 shadow-effect">
-          <h4><i class="las la-tasks la-lg"></i> Customized Solutions</h4>
-          <p>Receive a bespoke pricing plan.</p>
-          <p class="text-brand">Designed to cut your technology & processing expenses by at least 30%.</p>
-          <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand mt-2">Get Tailor-Made</a>
-        </div>
-      </div>
-      <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="300">
-        <div class="bg-base p-4 rounded-4 shadow-effect">
-          <h4><i class="las la-handshake la-lg"></i> Transparent Service Agreement</h4>
-          <p>Post-audit discussions lead to a detailed service agreement.</p>
-          <p class="text-brand">Where our mutual commitments, timelines, and expected outcomes are detailed.</p>
-          <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand mt-2">Formalize Your Savings</a>
-        </div>
-      </div>
-      <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="400">
-        <div class="bg-base p-4 rounded-4 shadow-effect">
-          <h4 class="text-brand"><i class="las la-award la-lg"></i> Why Choose L'Atelier des Shaun?</h4>
-          <ul>
-            <li>Risk-Free Commitment</li>
-            <li>Custom-Tailored Solutions</li>
-            <li>Transparent Partnership</li>
-          </ul>
-          <a href="https://calendly.com/rsaini6152/30min" class="btn btn-brand mt-2">Start Today</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- //PRICING -->
-
-<!-- AUTOMATIONS -->
-<section id="automations" class="full-height px-lg-5">
-  <div class="container">
-    <div class="row pb-4" data-aos="fade-up">
-      <div class="col-lg-8">
-        <h6 class="text-brand">Pre-Packaged Solutions</h6>
-        <h1>Automate and Thrive</h1>
-      </div>
-    </div>
-    <div class="row gy-4">
-      <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
-        <div class="card-custom rounded-4 bg-base shadow-effect">
-          <div class="card-custom-image rounded-4 text-center">
-            <i class="las la-utensils la-5x"></i>
-          </div>
-          <div class="card-custom-content p-4">
-            <h5 class="mb-4">Restaurant Automation</h5>
-            <p class="text-brand mb-2">$333/month</p>
-            <ul>
-              <li>Boost Revenue & Regulars</li>
-              <li>Enhance Reviews & Customer Experience</li>
-              <li>Advanced Data Collection to Build Loyalty and Brand Reputation</li>
-            </ul>
-            <button id="checkout-restaurant" class="btn btn-brand mt-2">Automate Your Restaurant</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="flip-left" data-aos-delay="600">
-        <div class="card-custom rounded-4 bg-base shadow-effect">
-          <div class="card-custom-image rounded-4 text-center">
-            <i class="las la-cut la-5x"></i>
-          </div>
-          <div class="card-custom-content p-4">
-            <h5 class="mb-4">Hair Salon Automation</h5>
-            <p class="text-brand mb-2">$699/month</p>
-            <ul>
-              <li>Boost Show Up Rates & Efficiency</li>
-              <li>Enhance Reviews & Customer Experience</li>
-              <li>Advanced Data Collection to Build Loyalty and Brand Reputation</li>
-            </ul>
-            <button id="checkout-salon" class="btn btn-brand mt-2">Automate Your Salon</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="flip-left" data-aos-delay="800">
-        <div class="card-custom rounded-4 bg-base shadow-effect">
-          <div class="card-custom-image rounded-4 text-center">
-            <i class="las la-palette la-5x"></i>
-          </div>
-          <div class="card-custom-content p-4">
-            <h5 class="mb-4">Art-Gallery Automation</h5>
-            <p class="text-brand mb-2">$666/month</p>
-            <ul>
-              <li>Boost Show Up Rates & Efficiency</li>
-              <li>Enhance Reviews & Customer Experience</li>
-              <li>Advanced Data Collection to Build Loyalty</li>
-            </ul>
-            <button id="checkout-gallery" class="btn btn-brand mt-2">Automate Your Gallery</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- //AUTOMATIONS -->
-
-    <!--REVIEWS-->
-    <section id="reviews" class="full-height px-lg-5">
-      <div class="container">
-        <div class="row pb-4" data-aos="fade-up">
-          <div class="col-lg-8">
-            <h6 class="text-brand">From Previous Commissions</h6>
-            <h1>Thoughts From Clients & Collaborators</h1>
-          </div>
-        </div>
-        <div class="row gy-4">
-          <div class="col-md-4" data-aos="fade-up">
-            <div class="review shadow-effect bg-base p-4 rounded-4">
-              <div class="text-brand h5">
-                <i class="las la-star"></i>
-                <i class="las la-star"></i>
-                <i class="las la-star"></i>
-                <i class="las la-star"></i>
-                <i class="las la-star"></i>
-              </div>
-              <p class="my-3">Centreel developed by Shaun/152 was one of the best in market, making it easy to train employees, maintain inventory, & track statistics. Communication is a character that I highly put an emphasis on. With Centreel, there has never been a case of miscommunication because their representatives are always ready to take your call & resolve any issues that you may be experiencing. Without a doubt, I would recommend Shaun for your IT/development needs.</p>
-              <div class="person">
-                <h5 class="mb-0">Lali Toor</h5>
-                <p class="mb-0">Kushi Cannabis</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="review shadow-effect bg-base p-4 rounded-4">
-              <div class="text-brand h5">
-                <i class="las la-star"></i>
-                <i class="las la-star"></i>
-                <i class="las la-star"></i>
-                <i class="las la-star"></i>
-                <i class="las la-star"></i>
-              </div>
-              <p class="my-3">I feel that they are always there for us when we need them. In this new and ever-growing industry there is a need for people that care about their customers. Definitely recommend them to other businesses.</p>
-              <div class="person">
-                <h5 class="mb-0">Arpit Kapila</h5>
-                <p class="mb-0">Eco Green Leaf Bar</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="review shadow-effect bg-base p-4 rounded-4">
-              <div class="text-brand h5">
-                <i class="las la-star"></i>
-                <i class="las la-star"></i>
-                <i class="las la-star"></i>
-                <i class="las la-star"></i>
-                <i class="las la-star"></i>
-              </div>
-              <p class="my-3">Shaun came to Tumbler Ridge to pitch their POS System to us. Shaun called and I told him he would be wasting his time because I was not going to switch but, he insisted on just 15 minutes of my time. I figured if he was willing to come this far I would take the time to listen. I am so happy that I did. I was so impressed with his passion and with their vision that I jumped at the chance to become a client.</p>
-              <div class="person">
-                <h5 class="mb-0">Christine Vanderburgt</h5>
-                <p class="mb-0">Ridge Cannabis & KC Dollar Store</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--//REVIEWS-->
-
-    <!--WORKSHOP-->
-    <section id="workshop" class="full-height px-lg-5">
-      <div class="container-fluid">
-        <div class="row pb-4" data-aos="fade-up">
-          <div class="col-lg-8">
-            <h6 class="text-brand">Showcase</h6>
-            <h1>Startup Ventures to Tech Innovations That Redefine Standards.</h1>
-            <p>Explore our innovations by scrolling right ➡️</p>
-          </div>
-        </div>
-        <div class="row flex-nowrap overflow-auto" style="scroll-snap-type: x mandatory;">
-          <div class="col-md-6" data-aos="fade-right" data-aos-delay="100" style="scroll-snap-align: start;">
-            <div class="card-custom rounded-4 bg-base shadow-effect">
-              <div class="card-custom-image rounded-4">
-                <img class="rounded-4" src="assets/images/this-removebg-preview.png" alt="">
-              </div>
-              <div class="card-custom-content p-4">
-                <h4>The Seamless Sales & Reconciliation Interface</h4>
-                <p>L'atelier's hassle-free solution simplifies sales tracking and addresses discrepancies with precision, delivering an elevated experience for your business and customers.</p>
-                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-right" data-aos-delay="200" style="scroll-snap-align: start;">
-            <div class="card-custom rounded-4 bg-base shadow-effect">
-              <div class="card-custom-image rounded-4">
-                <img class="rounded-4" src="assets/images/Inventory_Screenshot-removebg-preview.png" alt="">
-              </div>
-              <div class="card-custom-content p-4">
-                <h4>Revolutionizing Retail Inventory</h4>
-                <p>Streamlined inventory solution that saves time and reduces errors with intuitive one-click upload and precision scanning technology.</p>
-                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-right" data-aos-delay="300" style="scroll-snap-align: start;">
-            <div class="card-custom rounded-4 bg-base shadow-effect">
-              <div class="card-custom-image rounded-4">
-                <img class="rounded-4" src="assets/images/Pani-removebg-preview.png" alt="">
-              </div>
-              <div class="card-custom-content p-4">
-                <h4>Pani: Nourishing Roots, Flowing Futures</h4>
-                <p>Pani partners with Silver Sparrow Springs to deliver impactful water solutions, dedicating profits to safe water access for indigenous communities and sustainable agricultural initiatives.</p>
-                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-right" data-aos-delay="400" style="scroll-snap-align: start;">
-            <div class="card-custom rounded-4 bg-base shadow-effect">
-              <div class="card-custom-image rounded-4">
-                <img class="rounded-4" src="assets/images/Fully Supported Hardware.png" alt="">
-              </div>
-              <div class="card-custom-content p-4">
-                <h4>Seamless Hardware Integration</h4>
-                <p>Combines cutting-edge hardware with bespoke software solutions, ensuring every system enhances your retail experience from setup to success.</p>
-                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--//WORKSHOP-->
-
-    <!-- SOCIAL -->
-    <section id="braindump/social" class="full-height px-lg-5">
-      <div class="container">
-        <div class="row pb-4" data-aos="fade-up">
-          <div class="col-lg-8">
-            <h6 class="text-brand">Social</h6>
-            <h1>Thoughts & Musings</h1>
-          </div>
-        </div>
-        <div class="row gy-4">
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-custom rounded-4 bg-base shadow-effect">
-              <div class="card-custom-image rounded-4">
-                <img class="rounded-4" src="assets/images/Blog post 1.png" alt="">
-              </div>
-              <div class="card-custom-content p-4">
-                <p class="text-brand mb-2">LinkedIn</p>
-                <h5 class="mb-4">Riding the Cloud: Retailers, Your Magic Carpet Awaits! 🌥️</h5>
-                <p>Unleash the magic of ☁️ technology in your retail landscape. Step into a world where operational excellence, cost-efficiency, and superior customer experiences are the norm, not the exception. ☁️🚀#CloudMagic #RetailRevolution #DigitalDetour #OperationalExcellence #CustomerCentricity #TechTransformation</p>
-                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="card-custom rounded-4 bg-base shadow-effect">
-              <div class="card-custom-image rounded-4">
-                <img class="rounded-4" src="assets/images/streaming blog.png" alt="">
-              </div>
-              <div class="card-custom-content p-4">
-                <p class="text-brand mb-2">LinkedIn</p>
-                <h5 class="mb-4">Streaming's New Era: Adaptation and Balance in Digital Media Consumption</h5>
-                <p>Uncover how shifts in consumer behaviour, privacy concerns, and new regulations like 🇨🇦's Bill C-11 are reshaping the landscape of on-demand entertainment. Dive into the intricacies of balancing personalized content with digital privacy. Don't miss out on understanding the future of media consumption.#StreamingEvolution #DigitalMedia #PrivacyMatters #ConsumerTrends #BillC11 #StreamingFuture</p>
-                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="800">
-            <div class="card-custom rounded-4 bg-base shadow-effect">
-              <div class="card-custom-image rounded-4">
-                <img class="rounded-4" src="assets/images/big mac blog.png" alt="">
-              </div>
-              <div class="card-custom-content p-4">
-                <p class="text-brand mb-2">LinkedIn</p>
-                <h5 class="mb-4">From Big Macs to Big Tech: How Flipping the Switch on Automation and Cloud Tech is a Slam Dunk for Business Longevity</h5>
-                <p>Explore how McDonald's automated venture in hashtag#Texas unveils the power of embracing automation and cloud tech for businesses big or small. Dive into a future where technology is not just a game-changer, but a survival requisite.#Automation #CloudTechnology #FutureOfWork#BusinessInnovation #TechTide #UBI</p>
-                <a href="https://calendly.com/rsaini6152/30min" class="link-custom">Commission L'atelier</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- //SOCIAL -->
-
-    <!-- COMMISSION L'ATELIER -->
-    <section id="commission-latelier" class="full-height px-lg-5">
-      <div class="container">
-        <div class="row pb-4" data-aos="fade-up">
-          <div class="col-lg-8">
-            <h6 class="text-brand">Commission L'Atelier</h6>
-            <h1>Schedule a Consultation</h1>
-          </div>
-        </div>
-        <div class="row gy-4">
-          <div class="col-lg-12" data-aos="zoom-in" data-aos-delay="100">
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/rsaini6152/30min" style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--//COMMISSION L'ATELIER-->
-
-  <!-- Integrated Chat Widget -->
-<div class="chat-widget-container">
-  <chat-widget location-id="9WLzoBHW4f07rVVOFBwH"></chat-widget>
-</div>
-<script src="https://widgets.leadconnectorhq.com/loader.js" 
-        data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"></script>
-  <!-- // Integrated Chat Widget -->
-
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/aos.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="checkout.js"></script>
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>  
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="checkout.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>  
 </body>
 </html>
