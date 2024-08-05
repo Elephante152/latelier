@@ -16,8 +16,8 @@ body {
     background-color: var(--color-base2);
     color: var(--color-body);
     font-family: var(--font-base);
-    margin-right: 0; /* Prevent overflow caused by the sticky form */
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    margin-right: 0;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,8 +37,8 @@ a:hover {
 
 img {
     width: 100%;
-    max-width: 100%; /* Prevents stretching */
-    height: auto; /* Maintains aspect ratio */
+    max-width: 100%;
+    height: auto;
 }
 
 .text-brand {
@@ -200,13 +200,13 @@ img {
 .chat-widget-container {
     position: fixed;
     bottom: 20px;
-    left: 20px; /* Position on the left */
+    left: 20px;
     z-index: 20;
     background-color: var(--color-base2);
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    width: 90%; /* Adjusts width to be responsive */
+    width: 90%;
     overflow: hidden;
 }
 
@@ -238,120 +238,55 @@ img {
 .chat-message.user {
     background-color: var(--color-brand);
     color: var(--color-base);
-    margin-left: auto;
+    align-self: flex-end;
 }
 
-.chat-footer {
-    padding: 10px;
-    background-color: var(--color-base2);
+.chat-input-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: var(--color-base2);
+    padding: 10px;
 }
 
 .chat-input {
-    flex-grow: 1;
-    border: 1px solid var(--color-base);
-    border-radius: 4px;
+    flex: 1;
     padding: 8px;
-    background-color: var(--color-base2);
-    color: var(--color-body);
+    border: 1px solid var(--color-body);
+    border-radius: 4px;
+    margin-right: 8px;
+    background-color: var(--color-body);
+    color: var(--color-base);
 }
 
-.chat-input:focus {
-    outline: none;
-    border-color: var(--color-brand);
-}
-
-.chat-send-button {
+.chat-send-btn {
     background-color: var(--color-brand);
     color: var(--color-base);
     border: none;
-    border-radius: 4px;
     padding: 8px 16px;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: 700;
-    margin-left: 10px;
-    transition: background-color 0.3s ease;
 }
 
-.chat-send-button:hover {
+.chat-send-btn:hover {
     background-color: var(--color-brand2);
 }
 
-/* Form Styling */
+/* CTA Button and Form Styles */
 
-.form-container {
-    width: 400px;
-    max-height: 80vh;
-    overflow-y: auto;
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    z-index: 10;
-    background-color: var(--color-base);
-    border-left: 3px solid var(--color-brand);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px 0 0 8px;
-    padding: 20px;
-    transition: transform 0.3s ease; /* Transition for smooth opening */
-}
-
-.form-container.hidden {
-    transform: translateX(100%); /* Hidden off-screen */
-}
-
-.form-container h1,
-.form-container label {
-    color: var(--color-heading);
-}
-
-.form-container .form-control {
-    background-color: var(--color-base2);
-    border-color: var(--color-base);
-    color: var(--color-body);
-    margin-bottom: 10px;
-}
-
-.form-container .form-control:focus {
-    border-color: var(--color-brand);
-    box-shadow: none;
-}
-
-.form-container .btn {
-    background-color: var(--color-brand);
-    color: var(--color-base);
-    border: none;
-    margin-top: 10px;
-}
-
-.form-container .btn:hover {
-    background-color: var(--color-brand2);
-    color: var(--color-base);
-}
-
-.form-container .form-text,
-.form-container .form-check-label {
-    color: var(--color-body);
-}
-
-/* CTA Button Styling */
 .cta-button {
     position: fixed;
+    right: 20px;
     top: 50%;
-    right: 0;
     transform: translateY(-50%);
-    z-index: 11;
     background-color: var(--color-brand);
     color: var(--color-base);
-    border: none;
-    padding: 12px 20px;
-    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 8px 0 0 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
     transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 .cta-button:hover {
@@ -360,29 +295,27 @@ img {
 
 .cta-arrow {
     display: inline-block;
-    margin-left: 8px;
     transition: transform 0.3s ease;
 }
 
-.form-container.active + .cta-button .cta-arrow {
-    transform: rotate(180deg); /* Arrow points the other way when active */
+.form-container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100vh;
+    background-color: var(--color-base2);
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    .form-container {
-        width: 90%; /* Adjust for smaller screens */
-        right: 5%;
-        left: 5%;
-        bottom: 0;
-        top: auto;
-        transform: none;
-        max-height: 60vh;
-    }
+.form-container.open {
+    transform: translateX(0);
+}
 
-    .chat-widget-container {
-        bottom: 100px; /* Space above the form on mobile */
-        right: 5%;
-        left: 5%;
-    }
+.hidden {
+    display: none;
 }
