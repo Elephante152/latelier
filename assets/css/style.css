@@ -200,16 +200,13 @@ img {
     color: var(--color-base);
 }
 
-.shadow-effect {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Add drop shadows to cards/pages */
-.service,
-.review,
-.bg-base,
-.card-custom {
+/* Hover Effects with Drop Shadows */
+.service:hover,
+.review:hover,
+.bg-base:hover,
+.card-custom:hover {
     box-shadow: 0 4px 20px var(--color-brand);
+    transition: box-shadow 0.3s ease;
 }
 
 /* Chatbot Styling */
@@ -295,6 +292,7 @@ img {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+    writing-mode: vertical-rl;
     background-color: var(--color-brand);
     color: var(--color-base);
     padding: 12px 24px;
