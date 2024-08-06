@@ -30,6 +30,12 @@ chatSendBtn.addEventListener('click', () => {
     }
 });
 
+chatInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        chatSendBtn.click();
+    }
+});
+
 // CTA button functionality
 const ctaButton = document.getElementById('cta-form-trigger');
 const embeddedForm = document.getElementById('embedded-form');
@@ -42,4 +48,3 @@ ctaButton.addEventListener('click', () => {
         ctaButton.querySelector('.cta-arrow').style.transform = 'rotate(0deg)';
     }
 });
-
