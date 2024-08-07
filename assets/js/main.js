@@ -9,7 +9,7 @@ const chatMessages = chatWidgetContainer.querySelector('.chat-messages');
 const chatInput = chatWidgetContainer.querySelector('.chat-input');
 const chatSendBtn = chatWidgetContainer.querySelector('.chat-send-btn');
 const chatHeader = chatWidgetContainer.querySelector('.chat-header');
-const chatCloseBtn = chatWidgetContainer.querySelector('.chat-close');
+const chatMinimizeBtn = chatWidgetContainer.querySelector('.chat-minimize');
 
 function appendMessage(text, isUser = false) {
     const message = document.createElement('div');
@@ -20,14 +20,9 @@ function appendMessage(text, isUser = false) {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// Open chat widget when clicking the header
-chatHeader.addEventListener('click', () => {
-    chatWidgetContainer.classList.toggle('open');
-});
-
-// Close chat widget
-chatCloseBtn.addEventListener('click', () => {
-    chatWidgetContainer.style.display = 'none';
+// Minimize chat widget
+chatMinimizeBtn.addEventListener('click', () => {
+    chatWidgetContainer.classList.toggle('minimized');
 });
 
 // Send message on button click
@@ -73,6 +68,4 @@ function sendMessage() {
 
 // Initialize chat with the first step
 appendMessage(chatSteps[chatStep]);
-chatStep++;
-;
 chatStep++;
