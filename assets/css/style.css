@@ -226,12 +226,21 @@ img {
 
 .chat-header {
     background-color: var(--color-brand);
+    color: var(--color-base);
     padding: 10px;
     text-align: center;
     font-weight: bold;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    position: relative;
+}
+
+.chat-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .chat-messages {
@@ -252,6 +261,10 @@ img {
     border-radius: 4px;
     padding: 5px;
     background-color: var(--color-base);
+    color: var(--color-body);
+}
+
+.chat-input::placeholder {
     color: var(--color-body);
 }
 
