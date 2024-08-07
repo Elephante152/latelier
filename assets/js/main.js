@@ -9,6 +9,7 @@ const chatMessages = chatWidgetContainer.querySelector('.chat-messages');
 const chatInput = chatWidgetContainer.querySelector('.chat-input');
 const chatSendBtn = chatWidgetContainer.querySelector('.chat-send-btn');
 const chatHeader = chatWidgetContainer.querySelector('.chat-header');
+const chatCloseBtn = chatWidgetContainer.querySelector('.chat-close');
 const chatMinimizeBtn = chatWidgetContainer.querySelector('.chat-minimize');
 const embeddedForm = document.getElementById('sticky-sidebar-right-0X1zbJgl3WzJ6y66oxV8');
 
@@ -17,11 +18,11 @@ const userResponses = {};
 
 // Chat steps and respective form field IDs
 const chatSteps = [
-    { message: "Hey, welcome to L'Atelier De Rachit. Let's get started! Please provide your *Full Name*.", field: 'full_name' },
-    { message: "Thank you! Now, please provide your *Phone #*.", field: 'phone' },
-    { message: "Great! Next, please provide your *Email*.", field: 'email' },
-    { message: "Thank you! Now, please provide your *Business Name*.", field: 'business_name' },
-    { message: "Almost done! Please provide your *Business Website*.", field: 'business_website' },
+    { message: "Hey, welcome to L'Atelier De Rachit. Let's get started! Please provide your <strong>Full Name</strong>.", field: 'full_name' },
+    { message: "Thank you! Now, please provide your <strong>Phone #</strong>.", field: 'phone' },
+    { message: "Great! Next, please provide your <strong>Email</strong>.", field: 'email' },
+    { message: "Thank you! Now, please provide your <strong>Business Name</strong>.", field: 'business_name' },
+    { message: "Almost done! Please provide your <strong>Business Website</strong>.", field: 'business_website' },
     { message: "Lastly, let us know your next available times for a meeting/zoom call.", field: 'meeting_times' }
 ];
 
@@ -30,7 +31,7 @@ function appendMessage(text, isUser = false) {
     const message = document.createElement('div');
     message.classList.add('chat-message');
     if (isUser) message.classList.add('user');
-    message.textContent = text;
+    message.innerHTML = text;
     chatMessages.appendChild(message);
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
@@ -59,7 +60,7 @@ function sendMessage() {
         appendMessage(text, true);
         userResponses[chatSteps[chatStep].field] = text;
         chatInput.value = '';
-        
+
         // Populate the embedded form field
         populateFormField(chatSteps[chatStep].field, text);
 
@@ -73,6 +74,12 @@ function sendMessage() {
                 submitFormToCRM();
             }
         }, 1000);
+
+        // Show minimize button and hide close button after the first response
+        if (chatStep === 1) {
+            chatMinimizeBtn.classList.remove('hidden');
+            chatCloseBtn.classList.add('hidden');
+        }
     }
 }
 
@@ -87,7 +94,13 @@ function populateFormField(field, value) {
 
 // Submit form to CRM
 function submitFormToCRM() {
-    embeddedForm.contentWindow.document.querySelector('form').submit();
+    const formIframe = embeddedForm.contentWindow.document;
+    const form = formIframe.querySelector('form');
+    if (form) {
+        form.submit();
+    } else {
+        console.error("Form not found in the iframe.");
+    }
 }
 
 // Initialize chat with the first step
