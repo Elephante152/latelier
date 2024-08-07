@@ -74,3 +74,5 @@ function sendMessage() {
 // Initialize chat with the first step
 appendMessage(chatSteps[chatStep]);
 chatStep++;
+;
+chatStep++;
