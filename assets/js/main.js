@@ -10,7 +10,22 @@ const chatInput = chatWidgetContainer.querySelector('.chat-input');
 const chatSendBtn = chatWidgetContainer.querySelector('.chat-send-btn');
 const chatHeader = chatWidgetContainer.querySelector('.chat-header');
 const chatMinimizeBtn = chatWidgetContainer.querySelector('.chat-minimize');
+const embeddedForm = document.getElementById('sticky-sidebar-right-0X1zbJgl3WzJ6y66oxV8');
 
+let chatStep = 0;
+const userResponses = {};
+
+// Chat steps and respective form field IDs
+const chatSteps = [
+    { message: "Hey, welcome to L'Atelier De Rachit. Let's get started! Please provide your *Full Name*.", field: 'full_name' },
+    { message: "Thank you! Now, please provide your *Phone #*.", field: 'phone' },
+    { message: "Great! Next, please provide your *Email*.", field: 'email' },
+    { message: "Thank you! Now, please provide your *Business Name*.", field: 'business_name' },
+    { message: "Almost done! Please provide your *Business Website*.", field: 'business_website' },
+    { message: "Lastly, let us know your next available times for a meeting/zoom call.", field: 'meeting_times' }
+];
+
+// Append message to chat
 function appendMessage(text, isUser = false) {
     const message = document.createElement('div');
     message.classList.add('chat-message');
@@ -37,35 +52,43 @@ chatInput.addEventListener('keydown', (event) => {
     }
 });
 
-// Chatbot dialogue progression
-let chatStep = 0;
-const chatSteps = [
-    "Hey, welcome to L'Atelier De Rachit. Let's get started! Please provide your *Full Name*.",
-    "Thank you! Now, please provide your *Phone #*.",
-    "Great! Next, please provide your *Email*.",
-    "Thank you! Now, please provide your *Business Name*.",
-    "Almost done! Please provide your *Business Website*.",
-    "Lastly, let us know your next available times for a meeting/zoom call."
-];
-
+// Send and process user message
 function sendMessage() {
     const text = chatInput.value.trim();
     if (text) {
         appendMessage(text, true);
+        userResponses[chatSteps[chatStep].field] = text;
         chatInput.value = '';
         
-        // Move to the next step only after user input
+        // Populate the embedded form field
+        populateFormField(chatSteps[chatStep].field, text);
+
+        // Move to the next step
         setTimeout(() => {
+            chatStep++;
             if (chatStep < chatSteps.length) {
-                appendMessage(chatSteps[chatStep]);
-                chatStep++;
+                appendMessage(chatSteps[chatStep].message);
             } else {
                 appendMessage("Thank you for the information. We will contact you if we can improve your current business's baseline by at least 40%.");
+                submitFormToCRM();
             }
         }, 1000);
     }
 }
 
+// Populate form field
+function populateFormField(field, value) {
+    const formIframe = embeddedForm.contentWindow.document;
+    const formField = formIframe.querySelector(`[name="${field}"]`);
+    if (formField) {
+        formField.value = value;
+    }
+}
+
+// Submit form to CRM
+function submitFormToCRM() {
+    embeddedForm.contentWindow.document.querySelector('form').submit();
+}
+
 // Initialize chat with the first step
-appendMessage(chatSteps[chatStep]);
-chatStep++;
+appendMessage(chatSteps[chatStep].message);
