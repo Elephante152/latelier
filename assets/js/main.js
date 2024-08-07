@@ -42,19 +42,6 @@ chatInput.addEventListener('keydown', (event) => {
     }
 });
 
-// Send and append message
-function sendMessage() {
-    const text = chatInput.value.trim();
-    if (text) {
-        appendMessage(text, true);
-        chatInput.value = '';
-        setTimeout(() => {
-            // Simulate chatbot response logic
-            appendMessage("Hey, welcome to L'Atelier De Rachit. Let's get started! Please provide your *Full Name*.");
-        }, 1000);
-    }
-}
-
 // Chatbot dialogue progression
 let chatStep = 0;
 const chatSteps = [
@@ -66,30 +53,17 @@ const chatSteps = [
     "Lastly, let us know your next available times for a meeting/zoom call."
 ];
 
-function appendMessage(text, isUser = false) {
-    const message = document.createElement('div');
-    message.classList.add('chat-message');
-    if (isUser) message.classList.add('user');
-    message.textContent = text;
-    chatMessages.appendChild(message);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-
-    if (!isUser && chatStep < chatSteps.length - 1) {
-        chatStep++;
-        setTimeout(() => {
-            appendMessage(chatSteps[chatStep]);
-        }, 1000);
-    }
-}
-
 function sendMessage() {
     const text = chatInput.value.trim();
     if (text) {
         appendMessage(text, true);
         chatInput.value = '';
+        
+        // Move to the next step only after user input
         setTimeout(() => {
             if (chatStep < chatSteps.length) {
                 appendMessage(chatSteps[chatStep]);
+                chatStep++;
             } else {
                 appendMessage("Thank you for the information. We will contact you if we can improve your current business's baseline by at least 40%.");
             }
@@ -97,16 +71,6 @@ function sendMessage() {
     }
 }
 
-// CTA button functionality
-const ctaButton = document.getElementById('cta-form-trigger');
-const embeddedForm = document.getElementById('embedded-form');
-
-// Toggle form visibility on CTA click
-ctaButton.addEventListener('click', () => {
-    const formIsOpen = embeddedForm.classList.toggle('visible');
-    if (formIsOpen) {
-        ctaButton.querySelector('.cta-arrow').style.transform = 'rotate(180deg)';
-    } else {
-        ctaButton.querySelector('.cta-arrow').style.transform = 'rotate(0deg)';
-    }
-});
+// Initialize chat with the first step
+appendMessage(chatSteps[chatStep]);
+chatStep++;
