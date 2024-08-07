@@ -210,6 +210,7 @@ img {
 }
 
 /* Chat Widget */
+/* Chat Widget */
 .chat-widget-container {
     position: fixed;
     bottom: 20px;
@@ -222,6 +223,12 @@ img {
     display: flex;
     flex-direction: column;
     z-index: 1000;
+    transition: bottom 0.5s ease, right 0.5s ease;
+}
+
+.chat-widget-container.minimized {
+    bottom: -300px; /* Move the widget out of view */
+    right: 20px;
 }
 
 .chat-header {
@@ -235,7 +242,7 @@ img {
     position: relative;
 }
 
-.chat-close {
+.chat-minimize {
     position: absolute;
     right: 10px;
     top: 10px;
