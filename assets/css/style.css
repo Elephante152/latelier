@@ -211,6 +211,7 @@ img {
 
 /* Chat Widget */
 /* Chat Widget */
+/* Chat Widget */
 .chat-widget-container {
     position: fixed;
     bottom: 20px;
@@ -242,7 +243,7 @@ img {
     position: relative;
 }
 
-.chat-minimize {
+.chat-close, .chat-minimize {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -250,10 +251,24 @@ img {
     font-size: 16px;
 }
 
+.chat-minimize.hidden {
+    display: none;
+}
+
 .chat-messages {
     flex: 1;
     padding: 10px;
     overflow-y: auto;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chat-message.user {
+    text-align: right;
+    font-weight: bold;
+    color: var(--color-brand);
 }
 
 .chat-input-container {
@@ -289,7 +304,6 @@ img {
 .chat-send-btn:hover {
     background-color: var(--color-brand2);
 }
-
 /* CTA Button */
 .cta-button {
     position: fixed;
