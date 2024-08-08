@@ -9,7 +9,6 @@ const chatMessages = chatWidgetContainer.querySelector('.chat-messages');
 const chatInput = chatWidgetContainer.querySelector('.chat-input');
 const chatSendBtn = chatWidgetContainer.querySelector('.chat-send-btn');
 const chatHeader = chatWidgetContainer.querySelector('.chat-header');
-const chatCloseBtn = chatWidgetContainer.querySelector('.chat-close');
 const chatMinimizeBtn = chatWidgetContainer.querySelector('.chat-minimize');
 const embeddedForm = document.getElementById('sticky-sidebar-right-0X1zbJgl3WzJ6y66oxV8');
 
@@ -38,9 +37,13 @@ function appendMessage(text, isUser = false) {
 
 // Minimize chat widget
 chatMinimizeBtn.addEventListener('click', () => {
-    chatWidgetContainer.classList.toggle('minimized');
-    chatMinimizeBtn.classList.toggle('hidden');
-    chatCloseBtn.classList.toggle('hidden');
+    if (chatWidgetContainer.classList.contains('minimized')) {
+        chatWidgetContainer.classList.remove('minimized');
+        chatMinimizeBtn.textContent = '-';
+    } else {
+        chatWidgetContainer.classList.add('minimized');
+        chatMinimizeBtn.textContent = '+';
+    }
 });
 
 // Send message on button click
@@ -76,12 +79,6 @@ function sendMessage() {
                 submitFormToCRM();
             }
         }, 1000);
-
-        // Show minimize button and hide close button after the first response
-        if (chatStep === 0) {
-            chatMinimizeBtn.classList.remove('hidden');
-            chatCloseBtn.classList.add('hidden');
-        }
     }
 }
 
