@@ -225,8 +225,8 @@ img {
 }
 
 .chat-widget-container.minimized {
-    bottom: 20px;
     height: 40px;
+    overflow: hidden;
 }
 
 .chat-header {
@@ -240,16 +240,12 @@ img {
     position: relative;
 }
 
-.chat-close, .chat-minimize {
+.chat-minimize {
     position: absolute;
     right: 10px;
     top: 10px;
     cursor: pointer;
     font-size: 16px;
-}
-
-.chat-minimize.hidden {
-    display: none;
 }
 
 .chat-messages {
