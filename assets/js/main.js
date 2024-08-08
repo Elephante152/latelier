@@ -8,7 +8,6 @@ const chatWidgetContainer = document.querySelector('.chat-widget-container');
 const chatMessages = chatWidgetContainer.querySelector('.chat-messages');
 const chatInput = chatWidgetContainer.querySelector('.chat-input');
 const chatSendBtn = chatWidgetContainer.querySelector('.chat-send-btn');
-const chatHeader = chatWidgetContainer.querySelector('.chat-header');
 const chatMinimizeBtn = chatWidgetContainer.querySelector('.chat-minimize');
 const embeddedForm = document.getElementById('sticky-sidebar-right-0X1zbJgl3WzJ6y66oxV8');
 
