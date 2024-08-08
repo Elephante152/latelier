@@ -26,6 +26,7 @@ const chatSteps = [
 
 // Append message to chat
 function appendMessage(text, isUser = false) {
+    console.log('Appending message:', text); // Debugging line
     const message = document.createElement('div');
     message.classList.add('chat-message');
     if (isUser) message.classList.add('user');
@@ -60,6 +61,7 @@ chatInput.addEventListener('keydown', (event) => {
 // Send and process user message
 function sendMessage() {
     const text = chatInput.value.trim();
+    console.log('Sending message:', text); // Debugging line
     if (text) {
         appendMessage(text, true);
         userResponses[chatSteps[chatStep].field] = text;
@@ -83,21 +85,31 @@ function sendMessage() {
 
 // Populate form field
 function populateFormField(field, value) {
-    const formIframe = embeddedForm.contentWindow.document;
-    const formField = formIframe.querySelector(`[name="${field}"]`);
-    if (formField) {
-        formField.value = value;
+    try {
+        const formIframe = embeddedForm.contentWindow.document;
+        const formField = formIframe.querySelector(`[name="${field}"]`);
+        if (formField) {
+            formField.value = value;
+        } else {
+            console.error(`Form field ${field} not found in iframe.`);
+        }
+    } catch (error) {
+        console.error('Error populating form field:', error);
     }
 }
 
 // Submit form to CRM
 function submitFormToCRM() {
-    const formIframe = embeddedForm.contentWindow.document;
-    const form = formIframe.querySelector('form');
-    if (form) {
-        form.submit();
-    } else {
-        console.error("Form not found in the iframe.");
+    try {
+        const formIframe = embeddedForm.contentWindow.document;
+        const form = formIframe.querySelector('form');
+        if (form) {
+            form.submit();
+        } else {
+            console.error("Form not found in the iframe.");
+        }
+    } catch (error) {
+        console.error('Error submitting form:', error);
     }
 }
 
