@@ -65,6 +65,8 @@ function sendMessage() {
         userResponses[chatSteps[chatStep].field] = text;
         chatInput.value = '';
 
+        console.log(`Field: ${chatSteps[chatStep].field}, Value: ${text}`);
+
         // Populate the embedded form field
         populateFormField(chatSteps[chatStep].field, text);
 
@@ -87,6 +89,8 @@ function populateFormField(field, value) {
     const formField = formIframe.querySelector(`[name="${field}"]`);
     if (formField) {
         formField.value = value;
+    } else {
+        console.error(`Form field ${field} not found.`);
     }
 }
 
