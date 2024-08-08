@@ -208,9 +208,6 @@ img {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
 }
-
-/* Chat Widget */
-/* Chat Widget */
 /* Chat Widget */
 .chat-widget-container {
     position: fixed;
@@ -228,8 +225,8 @@ img {
 }
 
 .chat-widget-container.minimized {
-    bottom: -300px; /* Move the widget out of view */
-    right: 20px;
+    bottom: 20px;
+    height: 40px;
 }
 
 .chat-header {
@@ -304,6 +301,8 @@ img {
 .chat-send-btn:hover {
     background-color: var(--color-brand2);
 }
+/* CHAT Widget */
+
 /* CTA Button */
 .cta-button {
     position: fixed;
