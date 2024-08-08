@@ -11,25 +11,6 @@ const chatSendBtn = chatWidgetContainer.querySelector('.chat-send-btn');
 const chatMinimizeBtn = chatWidgetContainer.querySelector('.chat-minimize');
 const embeddedForm = document.getElementById('sticky-sidebar-right-0X1zbJgl3WzJ6y66oxV8');
 
-if (!chatWidgetContainer) {
-    console.error("Chat widget container not found.");
-}
-if (!chatMessages) {
-    console.error("Chat messages container not found.");
-}
-if (!chatInput) {
-    console.error("Chat input not found.");
-}
-if (!chatSendBtn) {
-    console.error("Chat send button not found.");
-}
-if (!chatMinimizeBtn) {
-    console.error("Chat minimize button not found.");
-}
-if (!embeddedForm) {
-    console.error("Embedded form not found.");
-}
-
 let chatStep = 0;
 const userResponses = {};
 
@@ -45,7 +26,6 @@ const chatSteps = [
 
 // Append message to chat
 function appendMessage(text, isUser = false) {
-    if (!chatMessages) return;
     const message = document.createElement('div');
     message.classList.add('chat-message');
     if (isUser) message.classList.add('user');
@@ -85,8 +65,6 @@ function sendMessage() {
         userResponses[chatSteps[chatStep].field] = text;
         chatInput.value = '';
 
-        console.log(`Field: ${chatSteps[chatStep].field}, Value: ${text}`);
-
         // Populate the embedded form field
         populateFormField(chatSteps[chatStep].field, text);
 
@@ -105,31 +83,21 @@ function sendMessage() {
 
 // Populate form field
 function populateFormField(field, value) {
-    try {
-        const formIframe = embeddedForm.contentWindow.document;
-        const formField = formIframe.querySelector(`[name="${field}"]`);
-        if (formField) {
-            formField.value = value;
-        } else {
-            console.error(`Form field ${field} not found.`);
-        }
-    } catch (error) {
-        console.error(`Error accessing form iframe: ${error.message}`);
+    const formIframe = embeddedForm.contentWindow.document;
+    const formField = formIframe.querySelector(`[name="${field}"]`);
+    if (formField) {
+        formField.value = value;
     }
 }
 
 // Submit form to CRM
 function submitFormToCRM() {
-    try {
-        const formIframe = embeddedForm.contentWindow.document;
-        const form = formIframe.querySelector('form');
-        if (form) {
-            form.submit();
-        } else {
-            console.error("Form not found in the iframe.");
-        }
-    } catch (error) {
-        console.error(`Error submitting form to CRM: ${error.message}`);
+    const formIframe = embeddedForm.contentWindow.document;
+    const form = formIframe.querySelector('form');
+    if (form) {
+        form.submit();
+    } else {
+        console.error("Form not found in the iframe.");
     }
 }
 
