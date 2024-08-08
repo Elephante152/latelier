@@ -39,6 +39,8 @@ function appendMessage(text, isUser = false) {
 // Minimize chat widget
 chatMinimizeBtn.addEventListener('click', () => {
     chatWidgetContainer.classList.toggle('minimized');
+    chatMinimizeBtn.classList.toggle('hidden');
+    chatCloseBtn.classList.toggle('hidden');
 });
 
 // Send message on button click
@@ -76,7 +78,7 @@ function sendMessage() {
         }, 1000);
 
         // Show minimize button and hide close button after the first response
-        if (chatStep === 1) {
+        if (chatStep === 0) {
             chatMinimizeBtn.classList.remove('hidden');
             chatCloseBtn.classList.add('hidden');
         }
